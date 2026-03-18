@@ -29,7 +29,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Sans:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
 
 <!-- Styles -->
 <link rel="stylesheet" href="./base.css">
@@ -55,30 +55,23 @@
 
 <!-- ===== HEADER ===== -->
 <header class="header">
-  <div class="container header__inner">
+  <div class="header__inner">
     <a href="#" class="header__logo" aria-label="Argos Investment Group home">
-      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Argos Investment Group logo">
-        <path d="M18 2L4 10v16l14 8 14-8V10L18 2z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-        <path d="M18 8l-8 4.5v9L18 26l8-4.5v-9L18 8z" stroke="currentColor" stroke-width="1" fill="none" opacity="0.5"/>
-        <path d="M18 12l-4 2.3v4.4l4 2.3 4-2.3v-4.4L18 12z" fill="currentColor" opacity="0.15"/>
-        <line x1="18" y1="2" x2="18" y2="8" stroke="currentColor" stroke-width="1" opacity="0.4"/>
-        <line x1="18" y1="26" x2="18" y2="34" stroke="currentColor" stroke-width="1" opacity="0.4"/>
-      </svg>
       <span class="header__logo-text">Argos</span>
     </a>
 
     <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="document.querySelector('.header__nav').classList.toggle('active')">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/>
       </svg>
     </button>
 
     <nav class="header__nav">
-      <a href="#philosophy">Philosophy</a>
+      <a href="#principles">Principles</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Inquiries</a>
       <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
         </svg>
       </button>
@@ -88,107 +81,94 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <div class="hero__bg"></div>
-  <div class="container hero__content">
-    <p class="hero__eyebrow">Private Capital Stewardship</p>
-    <h1 class="hero__title">Disciplined Stewardship.<br>Enduring Growth.</h1>
-    <div class="hero__line"></div>
-    <p class="hero__subtitle">Argos Investment Group is a private family office entity dedicated to preserving and compounding generational wealth through conviction, patience, and institutional discipline.</p>
+  <!-- Decorative left edge -->
+  <div class="hero__deco-edge" aria-hidden="true">
+    <div class="hero__deco-line"></div>
+    <svg class="hero__deco-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Botanical/heraldic leaf motif -->
+      <path d="M16 2C16 2 8 8 8 16c0 5 3.5 9 8 12" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+      <path d="M16 2C16 2 24 8 24 16c0 5-3.5 9-8 12" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+      <path d="M16 6C16 6 12 10 12 16c0 3 2 5.5 4 7.5" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.4"/>
+      <path d="M16 6C16 6 20 10 20 16c0 3-2 5.5-4 7.5" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.4"/>
+      <line x1="16" y1="2" x2="16" y2="30" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+    </svg>
+    <div class="hero__deco-line hero__deco-line--bottom"></div>
+  </div>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow reveal">Private Capital Stewardship</p>
+    <h1 class="hero__title">
+      <span class="hero__title-line" data-scramble>Disciplined Stewardship.</span>
+      <span class="hero__title-line hero__title-line--italic" data-scramble><em>Enduring Growth.</em></span>
+    </h1>
+    <p class="hero__subtitle reveal">A private family office entity dedicated to preserving and compounding generational wealth.</p>
+    <a href="#contact" class="bracket-btn reveal">
+      <span class="bracket-btn__corner bracket-btn__corner--tl"></span>
+      <span class="bracket-btn__corner bracket-btn__corner--tr"></span>
+      <span class="bracket-btn__corner bracket-btn__corner--bl"></span>
+      <span class="bracket-btn__corner bracket-btn__corner--br"></span>
+      <span class="bracket-btn__text">Request an Introduction</span>
+    </a>
   </div>
 </section>
 
 <!-- ===== PHILOSOPHY ===== -->
-<section class="section" id="philosophy">
+<section class="section-teal" id="principles">
   <div class="container">
-    <div class="section__header reveal">
-      <p class="section__eyebrow">Investment Philosophy</p>
-      <h2 class="section__title">Principled Capital Allocation</h2>
-      <p class="section__desc">Our approach combines the patience of long-term ownership with the rigor of institutional discipline. Every allocation decision begins with preservation and ends with compounding.</p>
+    <div class="principles__header reveal">
+      <p class="section__eyebrow section__eyebrow--light">Our Principles</p>
     </div>
-
-    <div class="philosophy-grid reveal-stagger">
-      <div class="philosophy-card">
-        <svg class="philosophy-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M24 4L8 14v20l16 10 16-10V14L24 4z"/>
-          <path d="M24 14v20"/>
-          <path d="M8 14l16 10 16-10"/>
-        </svg>
-        <h3 class="philosophy-card__title">Capital Preservation</h3>
-        <p class="philosophy-card__text">The first rule of compounding is to protect the base. We prioritize downside protection and structural resilience, ensuring the portfolio can weather volatility without forced liquidation.</p>
+    <div class="principles__grid">
+      <div class="principle reveal">
+        <h3 class="principle__title">Capital Preservation</h3>
+        <p class="principle__text">The first rule of compounding is to never compromise the base.</p>
       </div>
-
-      <div class="philosophy-card">
-        <svg class="philosophy-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="24" cy="24" r="18"/>
-          <path d="M24 10v14l8 8"/>
-        </svg>
-        <h3 class="philosophy-card__title">Patient Conviction</h3>
-        <p class="philosophy-card__text">Concentrated positions in high-quality businesses and assets, held through market cycles. We believe in owning great assets, minimizing friction, and letting compounding work over decades.</p>
+      <div class="principle reveal">
+        <h3 class="principle__title">Patient Conviction</h3>
+        <p class="principle__text">We hold concentrated positions in exceptional assets through full market cycles.</p>
       </div>
-
-      <div class="philosophy-card">
-        <svg class="philosophy-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <rect x="6" y="6" width="36" height="36" rx="4"/>
-          <line x1="6" y1="18" x2="42" y2="18"/>
-          <line x1="6" y1="30" x2="42" y2="30"/>
-          <line x1="18" y1="6" x2="18" y2="42"/>
-          <line x1="30" y1="6" x2="30" y2="42"/>
-        </svg>
-        <h3 class="philosophy-card__title">Intelligent Diversification</h3>
-        <p class="philosophy-card__text">True diversification across uncorrelated asset classes, each serving a specific purpose within the broader architecture. Designed for resilience across market environments.</p>
-      </div>
-
-      <div class="philosophy-card">
-        <svg class="philosophy-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 36V20"/>
-          <path d="M24 36V12"/>
-          <path d="M36 36V24"/>
-          <line x1="6" y1="36" x2="42" y2="36"/>
-          <path d="M12 20l12-8 12 12" stroke-dasharray="3 3"/>
-        </svg>
-        <h3 class="philosophy-card__title">Asymmetric Returns</h3>
-        <p class="philosophy-card__text">We seek investments where the potential upside significantly exceeds the downside risk. Early positions in transformative opportunities provide outsized return potential with bounded risk.</p>
+      <div class="principle reveal">
+        <h3 class="principle__title">Intelligent Diversification</h3>
+        <p class="principle__text">True diversification across uncorrelated holdings, each serving a distinct purpose.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== ABOUT ===== -->
-<section class="section" id="about" style="background: var(--color-surface);">
-  <div class="container">
-    <div class="about-layout reveal">
-      <div class="about-text">
-        <p class="section__eyebrow" style="margin-bottom: var(--space-4);">About Argos</p>
-        <h3>A Legacy of Disciplined Growth</h3>
-        <p>Argos Investment Group is the capital deployment arm of a single family office, purpose-built to centralize and professionalize the stewardship of a diversified investment portfolio.</p>
-        <p>Named after the mythological guardian known for vigilance and foresight, Argos embodies a philosophy of watchful stewardship. We take a generational view of wealth creation, prioritizing decisions that compound value over decades rather than quarters.</p>
-        <p>Our approach draws from the principles of the world's most successful long-term investors: maintain conviction in high-quality assets, minimize friction and fees, and always prioritize the preservation of capital as the foundation of growth.</p>
+<section class="section-parchment" id="about">
+  <div class="container about__inner">
+    <div class="about__content reveal">
+      <p class="section__eyebrow">A Legacy in the Making</p>
+      <div class="about__body">
+        <p>Named after the mythological guardian known for vigilance and foresight, Argos embodies a philosophy of watchful stewardship over generational wealth.</p>
+        <p>We take a generational view of wealth creation, prioritizing decisions that compound value over decades rather than quarters.</p>
       </div>
-      <div class="about-image">
-        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, var(--color-surface-dynamic) 0%, var(--color-surface-offset) 100%); display: flex; align-items: center; justify-content: center;">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 120px; opacity: 0.2;">
-            <path d="M100 10L20 55v90l80 45 80-45V55L100 10z" stroke="currentColor" stroke-width="2"/>
-            <path d="M100 40L50 67.5v45L100 140l50-27.5v-45L100 40z" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M100 65L75 79.5v21L100 115l25-14.5v-21L100 65z" fill="currentColor" opacity="0.1" stroke="currentColor" stroke-width="1"/>
-          </svg>
-        </div>
-      </div>
+    </div>
+    <div class="about__monogram reveal" aria-hidden="true">
+      <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="monogram-svg">
+        <!-- Decorative frame -->
+        <rect x="10" y="10" width="100" height="120" stroke="currentColor" stroke-width="0.5" opacity="0.2" fill="none"/>
+        <rect x="15" y="15" width="90" height="110" stroke="currentColor" stroke-width="0.3" opacity="0.15" fill="none"/>
+        <!-- The A -->
+        <text x="60" y="95" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="72" font-weight="300" fill="currentColor" opacity="0.15">A</text>
+      </svg>
     </div>
   </div>
 </section>
 
-<!-- ===== CONTACT / CTA ===== -->
-<section class="section cta-section" id="contact">
-  <div class="container">
+<!-- ===== CONTACT ===== -->
+<section class="section-contact" id="contact">
+  <div class="container contact__inner">
     <div class="reveal">
-      <p class="section__eyebrow" style="margin-bottom: var(--space-4);">Inquiries</p>
-      <h2>Private by Design</h2>
-      <p>Argos Investment Group operates as a private family office entity. For authorized inquiries regarding partnerships or co-investment opportunities, please reach out directly.</p>
-      <a href="mailto:admin@argosgroupinc.com" class="cta-btn">
-        Contact Us
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
+      <p class="section__eyebrow">Private by Design</p>
+      <p class="contact__text">For authorized inquiries, request an introduction.</p>
+      <a href="mailto:admin@argosgroupinc.com" class="bracket-btn bracket-btn--dark">
+        <span class="bracket-btn__corner bracket-btn__corner--tl"></span>
+        <span class="bracket-btn__corner bracket-btn__corner--tr"></span>
+        <span class="bracket-btn__corner bracket-btn__corner--bl"></span>
+        <span class="bracket-btn__corner bracket-btn__corner--br"></span>
+        <span class="bracket-btn__text">Request an Introduction</span>
       </a>
     </div>
   </div>
@@ -221,8 +201,8 @@
     if (!t) return;
     t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
     t.innerHTML = d === 'dark' 
-      ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
-      : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+      : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
   }
   updateIcon();
   
@@ -235,7 +215,75 @@
   }
 })();
 
-// Scroll reveal
+// Text scramble animation on hero headline
+(function(){
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ.,;:&';
+  
+  function scrambleText(text, progress) {
+    const revealCount = Math.floor(progress * text.length);
+    let result = '';
+    for (let i = 0; i < text.length; i++) {
+      if (i < revealCount) {
+        result += text[i];
+      } else if (text[i] === ' ' || text[i] === '.' || text[i] === ',') {
+        result += text[i];
+      } else {
+        result += chars[Math.floor(Math.random() * chars.length)];
+      }
+    }
+    return result;
+  }
+  
+  // Line 1: "Disciplined Stewardship."
+  const line1 = document.querySelector('[data-scramble]:first-child');
+  const line1Text = 'Disciplined Stewardship.';
+  
+  // Line 2: "Enduring Growth." (inside <em>)
+  const line2 = document.querySelector('.hero__title-line--italic');
+  const line2Text = 'Enduring Growth.';
+  
+  if (line1) {
+    line1.textContent = scrambleText(line1Text, 0);
+  }
+  if (line2 && line2.querySelector('em')) {
+    line2.querySelector('em').textContent = scrambleText(line2Text, 0);
+  }
+  
+  const duration = 1600;
+  const line1Delay = 300;
+  const line2Delay = 700;
+  let startTime = null;
+  
+  function animate(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    
+    // Line 1
+    if (elapsed > line1Delay) {
+      const p1 = Math.min((elapsed - line1Delay) / duration, 1);
+      if (line1) {
+        line1.textContent = p1 >= 1 ? line1Text : scrambleText(line1Text, p1);
+      }
+    }
+    
+    // Line 2
+    if (elapsed > line2Delay) {
+      const p2 = Math.min((elapsed - line2Delay) / duration, 1);
+      if (line2 && line2.querySelector('em')) {
+        line2.querySelector('em').textContent = p2 >= 1 ? line2Text : scrambleText(line2Text, p2);
+      }
+    }
+    
+    const maxEnd = Math.max(line1Delay, line2Delay) + duration;
+    if (elapsed < maxEnd) {
+      requestAnimationFrame(animate);
+    }
+  }
+  
+  requestAnimationFrame(animate);
+})();
+
+// Scroll reveal with IntersectionObserver
 (function(){
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -245,7 +293,7 @@
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => {
+  document.querySelectorAll('.reveal').forEach(el => {
     observer.observe(el);
   });
 })();
@@ -263,6 +311,21 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
+
+// Header scroll effect
+(function(){
+  let lastScroll = 0;
+  const header = document.querySelector('.header');
+  window.addEventListener('scroll', () => {
+    const current = window.scrollY;
+    if (current > 100) {
+      header.classList.add('header--scrolled');
+    } else {
+      header.classList.remove('header--scrolled');
+    }
+    lastScroll = current;
+  }, { passive: true });
+})();
 </script>
 
 </body>
