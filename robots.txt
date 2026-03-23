@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://argosgroupinc.com/sitemap.xml

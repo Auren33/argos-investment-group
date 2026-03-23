@@ -8,6 +8,14 @@
 <meta property="og:title" content="Argos Investment Group">
 <meta property="og:description" content="Private family office entity dedicated to disciplined, long-term wealth stewardship.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://argosgroupinc.com/">
+<meta property="og:site_name" content="Argos Investment Group">
+<meta property="og:image" content="https://argosgroupinc.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Argos Investment Group — Private Capital Stewardship">
+<meta name="twitter:description" content="Private family office entity dedicated to disciplined, long-term wealth stewardship.">
+<meta name="twitter:image" content="https://argosgroupinc.com/og-image.png">
+<link rel="canonical" href="https://argosgroupinc.com/">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,10 +30,26 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Argos Investment Group",
-  "description": "Private family office entity dedicated to disciplined, long-term wealth stewardship.",
-  "url": "",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Argos Investment Group",
+      "url": "https://argosgroupinc.com",
+      "description": "Private family office entity dedicated to disciplined, long-term wealth stewardship.",
+      "logo": "https://argosgroupinc.com/og-image.png"
+    },
+    {
+      "@type": "WebSite",
+      "name": "Argos Investment Group",
+      "url": "https://argosgroupinc.com",
+      "description": "Private Capital Stewardship",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://argosgroupinc.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -66,7 +90,9 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <div class="hero__bg"></div>
+  <div class="hero__bg">
+    <img src="./assets/hero-bridge.webp" alt="Suspension bridge vanishing into fog with city skyline, symbolizing engineered strength" loading="eager" class="hero__bg-img">
+  </div>
   <div class="container hero__content">
     <p class="hero__eyebrow">Private Capital Stewardship</p>
     <h1 class="hero__title">Disciplined Stewardship.<br>Enduring Growth.</h1>
@@ -132,13 +158,7 @@
         <p>Our approach draws from the principles of the world's most successful long-term investors: maintain conviction in high-quality assets, minimize friction and fees, and always prioritize the preservation of capital as the foundation of growth.</p>
       </div>
       <div class="about-image">
-        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, var(--color-surface-dynamic) 0%, var(--color-surface-offset) 100%); display: flex; align-items: center; justify-content: center;">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 120px; opacity: 0.2;">
-            <path d="M100 10L20 55v90l80 45 80-45V55L100 10z" stroke="currentColor" stroke-width="2"/>
-            <path d="M100 40L50 67.5v45L100 140l50-27.5v-45L100 40z" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M100 65L75 79.5v21L100 115l25-14.5v-21L100 65z" fill="currentColor" opacity="0.1" stroke="currentColor" stroke-width="1"/>
-          </svg>
-        </div>
+        <img src="./assets/skyscraper.webp" alt="Modern glass skyscraper reaching into the clouds, reflecting institutional ambition" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%);">
       </div>
     </div>
   </div>
